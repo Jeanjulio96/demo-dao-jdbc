@@ -6,8 +6,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Properties;
 import java.sql.Statement;
+import java.util.Properties;
 
 public class DB {
 
@@ -53,18 +53,17 @@ public class DB {
 			try {
 				st.close();
 			} catch (SQLException e) {
-				
-			throw new DbException(e.getMessage());
+				throw new DbException(e.getMessage());
 			}
 		}
 	}
-	public static void closeResultStatement(ResultSet rs) {
+
+	public static void closeResultSet(ResultSet rs) {
 		if (rs != null) {
 			try {
 				rs.close();
 			} catch (SQLException e) {
-				
-			throw new DbException(e.getMessage());
+				throw new DbException(e.getMessage());
 			}
 		}
 	}
